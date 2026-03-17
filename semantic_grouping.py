@@ -1,0 +1,2 @@
+Create a Python module that filters incidents for one selected spike day, generates embeddings from combined_text using sentence-transformers all-MiniLM-L6-v2, clusters them with KMeans, and returns the cluster assignment for each incident.
+Also return top representative examples and frequent terms per cluster.

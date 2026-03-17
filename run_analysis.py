@@ -1,0 +1,1 @@
+Create a Python entry script that loads the Excel file from data/incidents_march.xlsx, runs cleaning, spike detection, selects the highest spike day, runs semantic grouping for that day, builds a markdown report, and saves outputs including charts and csv summaries.
