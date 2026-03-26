@@ -246,3 +246,50 @@ And:
 "A good cluster should map to one functional team/process."
 
 ---
+
+You are a data analyst working on telecom incident data.
+
+I have a dataset of incidents with the following fields:
+- short_description
+- detailed_description
+- resolution_notes
+
+Your task is NOT to classify into predefined categories.
+
+Instead, perform the following:
+
+1. Preprocess the text:
+   - Remove noise (timestamps, IDs, special characters)
+   - Normalize text (lowercase, remove stopwords if needed)
+   - Handle common telecom abbreviations (aal, apo, clnr, fwa, etc.)
+
+2. Use ONLY detailed_description as primary input.
+   Use short_description as supporting context.
+
+3. Perform pattern discovery:
+   - Group similar incidents together
+   - Identify clusters based on semantic similarity or keyword patterns
+   - For each cluster, extract:
+     a) Top keywords/phrases
+     b) Sample incident descriptions
+     c) Cluster size
+
+4. Do NOT assign business labels like "Activation" or "Tier1_ops"
+
+5. Output format:
+
+Cluster 1:
+- Top Keywords:
+- Sample Patterns:
+- Count:
+
+Cluster 2:
+...
+
+6. Additionally:
+   - Identify incidents that do NOT clearly belong to any cluster
+   - Put them under:
+     "Unclear / Unknown Bucket"
+
+Goal:
+Help a human expert review clusters and define taxonomy later.
